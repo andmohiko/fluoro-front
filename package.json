@@ -1,0 +1,23 @@
+{
+  "name": "fluoro-front",
+  "version": "1.0.0",
+  "description": "fluoro front",
+  "author": "andmohiko",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^1.0.0",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^10"
+  }
+}
