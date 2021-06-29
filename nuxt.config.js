@@ -1,4 +1,4 @@
-
+require('dotenv').config()
 export default {
   mode: 'spa',
   srcDir: 'src',
@@ -33,6 +33,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/setup',
   ],
   /*
   ** Nuxt.js dev-modules
@@ -47,8 +48,12 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/dotenv',
     '@nuxtjs/style-resources'
   ],
+  env: {
+    ...process.env
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
