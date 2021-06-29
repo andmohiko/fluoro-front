@@ -20,11 +20,11 @@
             <div class="menu-item">
               <div class="menu-icon">
                 <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path v-if="routename === 'bookmarks'" d="M1 16.5H21M1 1.5H21H1ZM1 6.5H21H1ZM1 11.5H21H1Z" stroke="#ab6a91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path v-if="routename === 'queue'" d="M1 16.5H21M1 1.5H21H1ZM1 6.5H21H1ZM1 11.5H21H1Z" stroke="#ab6a91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   <path v-else d="M1 16.5H21M1 1.5H21H1ZM1 6.5H21H1ZM1 11.5H21H1Z" stroke="#4a5568d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
-              <span class="menu-title" :class="{ textBlue: routename === 'bookmarks' }">分析キュー</span>
+              <span class="menu-title" :class="{ textBlue: routename === 'queue' }">分析キュー</span>
             </div>
           </nuxt-link>
         </li>
