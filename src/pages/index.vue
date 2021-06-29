@@ -1,17 +1,17 @@
 <template>
   <div class="container">
-    <div>
-      <h1 class="text-2xl text-gray-700 py-4">fluoro-front</h1>
+    <div class="header mb-4">
+      <Button @onClick="trigger" label="トップを分析" buttonType="low" />
     </div>
-    <div>
+    <div class="submitRequest mb-4">
       <TextField
         ref="accountId"
         label="アカウントID"
         placeholder="andmohiko"
       />
+      <p class="error">{{ flashMessage }}</p>
+      <Button @onClick="submit" label="送信" />
     </div>
-    <p class="error">{{ flashMessage }}</p>
-    <Button @onClick="submit" label="送信" />
     <div class="records">
       <div class="mx-auto py-2 px-1">
         <div class="overflow-x-auto bg-white rounded-lg shadow overflow-y-auto relative" style="height: 100%;">
@@ -109,7 +109,9 @@ export default {
         process.env.ENV == 'develop' ? process.env.BASE_URL : process.env.PROD_URL
       )
     },
-
+    trigger() {
+      axios.get('/triggers')
+    },
     async submit() {
       const accountId = this.$refs.accountId.input
       if (!accountId) {
